@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types xmlns="http://www.qeo.org/formal/2013/Qeo_Data_Model" version="0.1">
+    <module name="qeo::animall::gamelle">
+        <struct name="NewWeight" behavior="event">
+            <doc>Change de poid de la gamelle</doc>  
+            <member name="uuid" type="string"> 
+                <doc>uuid de la gamelle.</doc>
+            </member>
+            <member name="weight" type="float32"> 
+                <doc>the new poids</doc>
+            </member>
+            <member name="timestamp" type="int32">
+                <doc>timestamp</doc>
+            </member>               
+        </struct>
+        <struct name="AnimalAMange" behavior="event">
+            <member name="uuidGamelle" type="string"> 
+                <doc>uuid de la gamelle.</doc>
+            </member>
+            <member name="labelGamelle" type="string">
+                <doc>label de la gamellle</doc>
+            </member>
+            <member name="nomAnimal" type="string">
+                <doc></doc>
+            </member>
+            <member name="labelRace" type="string">
+                <doc></doc>
+            </member>
+            <member name="evolutionRepasWeek" type="string">
+                <doc></doc>
+            </member>
+            <member name="timestamp" type="int32">
+                <doc>timestamp</doc>
+            </member>
+        </struct>
+    </module>
+    <module name="qeo::animall::balance">
+        <struct name="NewWeight" behavior="event">
+            <doc>Change de poid de la gamelle</doc>  
+            <member name="uuid" type="string"> 
+                <doc>uuid de la gamelle.</doc>
+            </member>
+            <member name="weight" type="float32"> 
+                <doc>the new poids</doc>
+            </member>
+            <member name="timestamp" type="int32">
+                <doc>timestamp</doc>
+            </member>               
+        </struct>
+    </module>
+    <module name="qeo::animall::porte">
+        <struct name="AnimalSort" behavior="event">
+            <member name="uuid" type="string"> 
+                <doc>uuid de la porte.</doc>
+            </member>
+            <member name="uuidCollier" type="string"> 
+                <doc>uuid du collier.</doc>
+            </member>
+        </struct>
+        <struct name="AnimalSortDetails" behavior="event">
+            <member name="uuid" type="string"> 
+                <doc>uuid de la porte.</doc>
+            </member>
+            <member name="uuidCollier" type="string"> 
+                <doc>uuid du collier.</doc>
+            </member>
+            <member name="labelPorte" type="string">
+                <doc></doc>
+            </member>
+            <member name="nomAnimal" type="string">
+                <doc></doc>
+            </member>
+            <member name="labelRace" type="string">
+                <doc></doc>
+            </member>
+        </struct>
+        <struct name="AnimalRentre" behavior="event">
+            <member name="uuid" type="string"> 
+                <doc>uuid de la porte.</doc>
+            </member>
+            <member name="uuidCollier" type="string"> 
+                <doc>uuid du collier.</doc>
+            </member>
+        </struct>
+        <struct name="AnimalRentreDetails" behavior="event">
+            <member name="uuid" type="string"> 
+                <doc>uuid de la porte.</doc>
+            </member>
+            <member name="uuidCollier" type="string"> 
+                <doc>uuid du collier.</doc>
+            </member>
+            <member name="labelPorte" type="string">
+                <doc></doc>
+            </member>
+            <member name="nomAnimal" type="string">
+                <doc></doc>
+            </member>
+            <member name="labelRace" type="string">
+                <doc></doc>
+            </member>
+        </struct>
+    </module>
+    <module name="qeo::animall::collier">
+    </module>
+    <module name="qeo::animall::tv">
+        <struct name="AfficherPageWeb" behavior="event">
+            <member name="url" type="string">
+                <doc></doc>
+            </member>
+            <member name="dataPost" type="string">
+                <doc></doc>
+            </member>
+        </struct>
+    </module>
+    <module name="qeo::animall::nao">
+        <struct name="Say">
+            <member name="text" type="string">
+            </member>
+        </struct>
+    </module>
+</types> 
+
+
+

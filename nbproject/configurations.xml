@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="Animall" projectFiles="true">
+        <logicalFolder name="f1" displayName="Device" projectFiles="true">
+          <itemPath>/home/zeus/NetBeansProjects/Animall/AnimallDeviceBalance.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/AnimallDeviceBridge.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/AnimallDeviceGamelle.hpp</itemPath>
+          <itemPath>AnimallDevicePhone.hpp</itemPath>
+          <itemPath>AnimallDevicePorte.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/AnimallDeviceTv.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Model" projectFiles="true">
+        </logicalFolder>
+        <itemPath>Api.hpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Qeo" projectFiles="true">
+        <logicalFolder name="f1" displayName="Event" projectFiles="true">
+          <itemPath>/home/zeus/NetBeansProjects/Animall/QeoEventReader.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/QeoEventWriter.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="State" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Tool" projectFiles="true">
+        <logicalFolder name="f1" displayName="Cmd" projectFiles="true">
+          <itemPath>/home/zeus/NetBeansProjects/Animall/ToolCmdBalance.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/ToolCmdBridge.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/ToolCmdGamelle.hpp</itemPath>
+          <itemPath>/home/zeus/NetBeansProjects/Animall/ToolCmdLogger.hpp</itemPath>
+        </logicalFolder>
+        <itemPath>/home/zeus/NetBeansProjects/Animall/ToolCommand.hpp</itemPath>
+      </logicalFolder>
+      <itemPath>AnimallQeoEvent.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>AnimallQeoEvent.xml</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="Animall" projectFiles="true">
+        <logicalFolder name="f1" displayName="Device" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="Model" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Qeo" projectFiles="true">
+        <logicalFolder name="f1" displayName="Event" projectFiles="true">
+          <itemPath>QeoEventReader.cpp</itemPath>
+          <itemPath>QeoEventWriter.cpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="State" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Tool" projectFiles="true">
+        <logicalFolder name="f1" displayName="Cmd" projectFiles="true">
+        </logicalFolder>
+        <itemPath>ToolCommand.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>AnimallQeoEvent.c</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <architecture>1</architecture>
+          <incDir>
+            <pElem>../../Documents/QeoSDK-0.15.0/c/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <architecture>1</architecture>
+          <incDir>
+            <pElem>../../Documents/QeoSDK-0.15.0/c/include</pElem>
+          </incDir>
+          <useLinkerLibraries>false</useLinkerLibraries>
+        </ccTool>
+        <asmTool>
+          <architecture>1</architecture>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../Documents/QeoSDK-0.15.0/c/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeo.so</linkerLibFileItem>
+            <linkerLibFileItem>../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeoutil.so</linkerLibFileItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceBalance.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceBridge.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceGamelle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceTv.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/QeoEventReader.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/QeoEventWriter.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdBalance.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdBridge.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdGamelle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdLogger.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCommand.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="AnimallDevicePhone.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallDevicePorte.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Api.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QeoEventReader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="QeoEventWriter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ToolCommand.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceBalance.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceBridge.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceGamelle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/AnimallDeviceTv.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/QeoEventReader.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/QeoEventWriter.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdBalance.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdBridge.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdGamelle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCmdLogger.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/zeus/NetBeansProjects/Animall/ToolCommand.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="AnimallDevicePhone.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallDevicePorte.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Api.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QeoEventReader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="QeoEventWriter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ToolCommand.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
