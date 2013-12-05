@@ -15,6 +15,15 @@
         </logicalFolder>
         <logicalFolder name="f2" displayName="Model" projectFiles="true">
         </logicalFolder>
+        <logicalFolder name="f3" displayName="Qeo" projectFiles="true">
+          <logicalFolder name="f1" displayName="Event" projectFiles="true">
+            <itemPath>AnimallQeoEventBalance.hpp</itemPath>
+            <itemPath>AnimallQeoEventGamelle.hpp</itemPath>
+            <itemPath>AnimallQeoEventTv.hpp</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="State" projectFiles="true">
+          </logicalFolder>
+        </logicalFolder>
         <itemPath>Api.hpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Qeo" projectFiles="true">
@@ -48,6 +57,12 @@
         <logicalFolder name="f1" displayName="Device" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="f4" displayName="Model" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Qeo" projectFiles="true">
+          <logicalFolder name="f1" displayName="Event" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="State" projectFiles="true">
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Qeo" projectFiles="true">
@@ -95,6 +110,7 @@
         </cTool>
         <ccTool>
           <architecture>1</architecture>
+          <standard>8</standard>
           <incDir>
             <pElem>../../Documents/QeoSDK-0.15.0/c/include</pElem>
           </incDir>
@@ -178,6 +194,12 @@
       <item path="AnimallQeoEvent.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventBalance.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventGamelle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventTv.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Api.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -274,6 +296,12 @@
       <item path="AnimallQeoEvent.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventBalance.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventGamelle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallQeoEventTv.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Api.hpp" ex="false" tool="3" flavor2="0">
       </item>

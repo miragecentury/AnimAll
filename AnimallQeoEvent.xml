@@ -33,6 +33,14 @@
                 <doc>timestamp</doc>
             </member>
         </struct>
+        <struct name="ForceService" behavior="event">
+            <member name="uuidGamelle" type="string">
+                <doc>uuid de la gamelle.</doc>
+            </member>
+            <member name="timestamp" type="int32">
+                <doc>timestamp</doc>
+            </member>
+        </struct>
     </module>
     <module name="qeo::animall::balance">
         <struct name="NewWeight" behavior="event">

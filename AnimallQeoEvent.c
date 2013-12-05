@@ -21,6 +21,12 @@ const DDS_TypeSupport_meta qeo_animall_gamelle_AnimalAMange_type[] = {
     { .tc = CDR_TYPECODE_LONG, .name = "timestamp", .offset = offsetof(qeo_animall_gamelle_AnimalAMange_t, timestamp) },  
 };
 
+const DDS_TypeSupport_meta qeo_animall_gamelle_ForceService_type[] = {
+    { .tc = CDR_TYPECODE_STRUCT, .name = "qeo.animall.gamelle.ForceService", .flags = TSMFLAG_DYNAMIC|TSMFLAG_GENID|TSMFLAG_MUTABLE, .nelem = 2, .size = sizeof(qeo_animall_gamelle_ForceService_t) },  
+    { .tc = CDR_TYPECODE_CSTRING, .name = "uuidGamelle", .flags = TSMFLAG_DYNAMIC, .offset = offsetof(qeo_animall_gamelle_ForceService_t, uuidGamelle), .size = 0 },  
+    { .tc = CDR_TYPECODE_LONG, .name = "timestamp", .offset = offsetof(qeo_animall_gamelle_ForceService_t, timestamp) },  
+};
+
 const DDS_TypeSupport_meta qeo_animall_balance_NewWeight_type[] = {
     { .tc = CDR_TYPECODE_STRUCT, .name = "qeo.animall.balance.NewWeight", .flags = TSMFLAG_DYNAMIC|TSMFLAG_GENID|TSMFLAG_MUTABLE, .nelem = 3, .size = sizeof(qeo_animall_balance_NewWeight_t) },  
     { .tc = CDR_TYPECODE_CSTRING, .name = "uuid", .flags = TSMFLAG_DYNAMIC, .offset = offsetof(qeo_animall_balance_NewWeight_t, uuid), .size = 0 },  

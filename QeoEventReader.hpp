@@ -20,7 +20,7 @@ namespace Qeo {
 
         class Reader {
         public:
-            Reader(qeo_factory_t* qeo, void* callback, void*, void* event);
+            Reader(qeo_factory_t* qeo, void* callback, void* event);
             ~Reader();
         private:
             void factory();

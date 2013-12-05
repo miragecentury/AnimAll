@@ -10,6 +10,8 @@
 
 namespace Animall {
     namespace Device {
+        
+//        void GamelleThreadWaitAnimallQeo
 
         class Gamelle {
         public:

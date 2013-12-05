@@ -2,7 +2,7 @@
 
 using namespace Qeo::Event;
 
-Reader::Reader(qeo_factory_t* qeo, void* callback, void*, void* event) {
+Reader::Reader(qeo_factory_t* qeo, void* callback, void* event) {
     this->qeo = qeo;
     this->callback = callback;
     this->event = event;
@@ -17,7 +17,6 @@ Reader::~Reader() {
     if (this->qeoEventReaderListener != NULL) {
         free(this->qeoEventReaderListener);
     }
-
 }
 
 void Reader::factory() {

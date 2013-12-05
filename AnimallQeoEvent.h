@@ -55,6 +55,18 @@ typedef struct {
 } qeo_animall_gamelle_AnimalAMange_t;
 extern const DDS_TypeSupport_meta qeo_animall_gamelle_AnimalAMange_type[];
 
+typedef struct {
+    /**
+     * uuid de la gamelle.
+     */
+    char * uuidGamelle;
+    /**
+     * timestamp
+     */
+    int32_t timestamp;
+} qeo_animall_gamelle_ForceService_t;
+extern const DDS_TypeSupport_meta qeo_animall_gamelle_ForceService_type[];
+
 /**
  * Change de poid de la gamelle
  */

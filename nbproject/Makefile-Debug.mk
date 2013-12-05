@@ -72,28 +72,28 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 
 ${OBJECTDIR}/AnimallQeoEvent.o: AnimallQeoEvent.c 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
 
 ${OBJECTDIR}/QeoEventReader.o: QeoEventReader.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/QeoEventReader.o QeoEventReader.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventReader.o QeoEventReader.cpp
 
 ${OBJECTDIR}/QeoEventWriter.o: QeoEventWriter.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
 
 ${OBJECTDIR}/ToolCommand.o: ToolCommand.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/ToolCommand.o ToolCommand.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCommand.o ToolCommand.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

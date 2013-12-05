@@ -23,27 +23,32 @@ void Command::dispath(int argc, char** argv, std::string firstArg) {
 
     if (exec == false && cmdBalance.compare(firstArg)) {
         exec = true;
+        Command::cmdBalance(argc, argv);
     }
+
     if (exec == false && cmdBridge.compare(firstArg)) {
         exec = true;
+        Command::cmdBridge(argc, argv);
     }
 
     if (exec == false && cmdGamelle.compare(firstArg)) {
         exec = true;
+        Command::cmdGamelle(argc, argv);
     }
 
     if (exec == false && cmdTv.compare(firstArg)) {
         exec = true;
+        Command::cmdTv(argc, argv);
     }
+
     if (exec == false && cmdPhone.compare(firstArg)) {
         exec = true;
+
     }
 
     if (exec == false && cmdPorte.compare(firstArg)) {
         exec = true;
     }
-
-
 
     if (exec == false) {
         Command::help();
@@ -52,11 +57,12 @@ void Command::dispath(int argc, char** argv, std::string firstArg) {
 
 void Command::help() {
     std::cout << "Help:" << std::endl;
-    std::cout << "\t- " << "balance" << "\t : " << "pilotage de la balance";
-    std::cout << "\t- " << "gamelle" << "\t : " << "pilotage de la gamelle";
-    std::cout << "\t- " << "bridge" << "\t : " << "pilotage du bridge";
-    std::cout << "\t- " << "tv" << "\t : " << "pilotage de la tv";
-    std::cout << "\t- " << "phone" << "\t : " << "pilotage du téléphone";
+    std::cout << "\t- " << "balance" << "\t : " << "pilotage de la balance" << std::endl;
+    std::cout << "\t- " << "gamelle" << "\t : " << "pilotage de la gamelle" << std::endl;
+    std::cout << "\t- " << "bridge" << "\t : " << "pilotage du bridge" << std::endl;
+    std::cout << "\t- " << "tv" << "\t\t : " << "pilotage de la tv" << std::endl;
+    std::cout << "\t- " << "phone" << "\t\t : " << "pilotage du téléphone" << std::endl;
+    std::cout << "\t- " << "portique" << "\t : " << "pilotage du portique" << std::endl;
 }
 
 /**/
