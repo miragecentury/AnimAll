@@ -37,6 +37,9 @@
             <member name="uuidGamelle" type="string">
                 <doc>uuid de la gamelle.</doc>
             </member>
+            <member name="dose" type="int32">
+                <doc>nombre de dose</doc>
+            </member>
             <member name="timestamp" type="int32">
                 <doc>timestamp</doc>
             </member>
