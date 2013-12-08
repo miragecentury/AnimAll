@@ -17,14 +17,14 @@
         </logicalFolder>
         <logicalFolder name="f3" displayName="Qeo" projectFiles="true">
           <logicalFolder name="f1" displayName="Event" projectFiles="true">
-            <itemPath>AnimallQeoEventBalance.hpp</itemPath>
-            <itemPath>AnimallQeoEventGamelle.hpp</itemPath>
-            <itemPath>AnimallQeoEventTv.hpp</itemPath>
+            <logicalFolder name="f1" displayName="Gamelle" projectFiles="true">
+              <itemPath>AnimallQeoEventGamelleNewWeight.hpp</itemPath>
+            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="State" projectFiles="true">
           </logicalFolder>
         </logicalFolder>
-        <itemPath>Api.hpp</itemPath>
+        <itemPath>AnimallApi.hpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Qeo" projectFiles="true">
         <logicalFolder name="f1" displayName="Event" projectFiles="true">
@@ -55,15 +55,21 @@
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Animall" projectFiles="true">
         <logicalFolder name="f1" displayName="Device" projectFiles="true">
+          <itemPath>AnimallDeviceBridge.cpp</itemPath>
+          <itemPath>AnimallDeviceGamelle.cpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f4" displayName="Model" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="f2" displayName="Qeo" projectFiles="true">
           <logicalFolder name="f1" displayName="Event" projectFiles="true">
+            <logicalFolder name="f1" displayName="Gamelle" projectFiles="true">
+              <itemPath>AnimallQeoEventGamelleNewWeight.cpp</itemPath>
+            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="State" projectFiles="true">
           </logicalFolder>
         </logicalFolder>
+        <itemPath>AnimallApi.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Qeo" projectFiles="true">
         <logicalFolder name="f1" displayName="Event" projectFiles="true">
@@ -75,6 +81,7 @@
       </logicalFolder>
       <logicalFolder name="f1" displayName="Tool" projectFiles="true">
         <logicalFolder name="f1" displayName="Cmd" projectFiles="true">
+          <itemPath>ToolCmdGamelle.cpp</itemPath>
         </logicalFolder>
         <itemPath>ToolCommand.cpp</itemPath>
       </logicalFolder>
@@ -185,6 +192,14 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="AnimallApi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AnimallApi.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallDeviceBridge.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AnimallDeviceGamelle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="AnimallDevicePhone.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallDevicePorte.hpp" ex="false" tool="3" flavor2="0">
@@ -195,17 +210,21 @@
       </item>
       <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="AnimallQeoEventBalance.hpp" ex="false" tool="3" flavor2="0">
+      <item path="AnimallQeoEventGamelleNewWeight.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
-      <item path="AnimallQeoEventGamelle.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="AnimallQeoEventTv.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Api.hpp" ex="false" tool="3" flavor2="0">
+      <item path="AnimallQeoEventGamelleNewWeight.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="QeoEventReader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="QeoEventWriter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ToolCmdGamelle.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ToolCommand.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -287,6 +306,14 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="AnimallApi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AnimallApi.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AnimallDeviceBridge.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AnimallDeviceGamelle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="AnimallDevicePhone.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallDevicePorte.hpp" ex="false" tool="3" flavor2="0">
@@ -297,17 +324,21 @@
       </item>
       <item path="AnimallQeoEvent.xml" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="AnimallQeoEventBalance.hpp" ex="false" tool="3" flavor2="0">
+      <item path="AnimallQeoEventGamelleNewWeight.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
-      <item path="AnimallQeoEventGamelle.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="AnimallQeoEventTv.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Api.hpp" ex="false" tool="3" flavor2="0">
+      <item path="AnimallQeoEventGamelleNewWeight.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="QeoEventReader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="QeoEventWriter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ToolCmdGamelle.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ToolCommand.cpp" ex="false" tool="1" flavor2="0">
       </item>

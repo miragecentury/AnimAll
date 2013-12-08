@@ -1,4 +1,5 @@
 #include "ToolCommand.hpp"
+#include "ToolCmdGamelle.hpp"
 
 using namespace Tool;
 
@@ -21,32 +22,32 @@ void Command::dispath(int argc, char** argv, std::string firstArg) {
     std::string cmdPhone = "phone";
     std::string cmdPorte = "porte";
 
-    if (exec == false && cmdBalance.compare(firstArg)) {
+    if (exec == false && !cmdBalance.compare(firstArg)) {
         exec = true;
         Command::cmdBalance(argc, argv);
     }
 
-    if (exec == false && cmdBridge.compare(firstArg)) {
+    if (exec == false && !cmdBridge.compare(firstArg)) {
         exec = true;
         Command::cmdBridge(argc, argv);
     }
 
-    if (exec == false && cmdGamelle.compare(firstArg)) {
+    if (exec == false && !cmdGamelle.compare(firstArg)) {
         exec = true;
         Command::cmdGamelle(argc, argv);
     }
 
-    if (exec == false && cmdTv.compare(firstArg)) {
+    if (exec == false && !cmdTv.compare(firstArg)) {
         exec = true;
         Command::cmdTv(argc, argv);
     }
 
-    if (exec == false && cmdPhone.compare(firstArg)) {
+    if (exec == false && !cmdPhone.compare(firstArg)) {
         exec = true;
 
     }
 
-    if (exec == false && cmdPorte.compare(firstArg)) {
+    if (exec == false && !cmdPorte.compare(firstArg)) {
         exec = true;
     }
 
@@ -104,7 +105,7 @@ void Command::cmdBridgeHelp() {
 }
 
 void Command::cmdGamelle(int argc, char** argv) {
-
+    Tool::Cmd::Gamelle::service();
 }
 
 void Command::cmdGamelleHelp() {

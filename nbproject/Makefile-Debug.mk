@@ -35,9 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AnimallApi.o \
+	${OBJECTDIR}/AnimallDeviceBridge.o \
+	${OBJECTDIR}/AnimallDeviceGamelle.o \
 	${OBJECTDIR}/AnimallQeoEvent.o \
+	${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o \
 	${OBJECTDIR}/QeoEventReader.o \
 	${OBJECTDIR}/QeoEventWriter.o \
+	${OBJECTDIR}/ToolCmdGamelle.o \
 	${OBJECTDIR}/ToolCommand.o \
 	${OBJECTDIR}/main.o
 
@@ -70,10 +75,30 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallApi.o AnimallApi.cpp
+
+${OBJECTDIR}/AnimallDeviceBridge.o: AnimallDeviceBridge.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceBridge.o AnimallDeviceBridge.cpp
+
+${OBJECTDIR}/AnimallDeviceGamelle.o: AnimallDeviceGamelle.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceGamelle.o AnimallDeviceGamelle.cpp
+
 ${OBJECTDIR}/AnimallQeoEvent.o: AnimallQeoEvent.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
+
+${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o: AnimallQeoEventGamelleNewWeight.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o AnimallQeoEventGamelleNewWeight.cpp
 
 ${OBJECTDIR}/QeoEventReader.o: QeoEventReader.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -84,6 +109,11 @@ ${OBJECTDIR}/QeoEventWriter.o: QeoEventWriter.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
+
+${OBJECTDIR}/ToolCmdGamelle.o: ToolCmdGamelle.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdGamelle.o ToolCmdGamelle.cpp
 
 ${OBJECTDIR}/ToolCommand.o: ToolCommand.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -22,8 +22,9 @@ const DDS_TypeSupport_meta qeo_animall_gamelle_AnimalAMange_type[] = {
 };
 
 const DDS_TypeSupport_meta qeo_animall_gamelle_ForceService_type[] = {
-    { .tc = CDR_TYPECODE_STRUCT, .name = "qeo.animall.gamelle.ForceService", .flags = TSMFLAG_DYNAMIC|TSMFLAG_GENID|TSMFLAG_MUTABLE, .nelem = 2, .size = sizeof(qeo_animall_gamelle_ForceService_t) },  
+    { .tc = CDR_TYPECODE_STRUCT, .name = "qeo.animall.gamelle.ForceService", .flags = TSMFLAG_DYNAMIC|TSMFLAG_GENID|TSMFLAG_MUTABLE, .nelem = 3, .size = sizeof(qeo_animall_gamelle_ForceService_t) },  
     { .tc = CDR_TYPECODE_CSTRING, .name = "uuidGamelle", .flags = TSMFLAG_DYNAMIC, .offset = offsetof(qeo_animall_gamelle_ForceService_t, uuidGamelle), .size = 0 },  
+    { .tc = CDR_TYPECODE_LONG, .name = "dose", .offset = offsetof(qeo_animall_gamelle_ForceService_t, dose) },  
     { .tc = CDR_TYPECODE_LONG, .name = "timestamp", .offset = offsetof(qeo_animall_gamelle_ForceService_t, timestamp) },  
 };
 

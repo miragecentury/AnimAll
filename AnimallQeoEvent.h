@@ -61,6 +61,10 @@ typedef struct {
      */
     char * uuidGamelle;
     /**
+     * nombre de dose
+     */
+    int32_t dose;
+    /**
      * timestamp
      */
     int32_t timestamp;

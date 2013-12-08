@@ -5,6 +5,8 @@
  * Created on 25 novembre 2013, 09:33
  */
 
+#define DEBUG_ANIMALL true;
+
 #include <cstdlib>
 #include "ToolCommand.hpp"
 

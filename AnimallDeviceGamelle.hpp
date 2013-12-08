@@ -4,20 +4,40 @@
  *
  * Created on 25 novembre 2013, 11:55
  */
+#include <iostream>
+#include "AnimallQeoEventGamelleNewWeight.hpp"
+
+extern "C" {
+#include "qeo/api.h"
+#include "qeo/factory.h"
+}
 
 #ifndef ANIMALLDEVICEGAMELLE_HPP
 #define	ANIMALLDEVICEGAMELLE_HPP
 
 namespace Animall {
     namespace Device {
-        
-//        void GamelleThreadWaitAnimallQeo
+
+        class GamelleMat;
 
         class Gamelle {
         public:
+            Gamelle();
+            void run();
+            ~Gamelle();
         private:
-        protected:
+            qeo_factory_t* qeo = NULL;
+            GamelleMat* mat = NULL;
         };
+
+        class GamelleMat {
+        public:
+            GamelleMat(Gamelle* gamelle);
+            ~GamelleMat();
+        private:
+            Gamelle* gamelle = NULL;
+        };
+
     }
 }
 
