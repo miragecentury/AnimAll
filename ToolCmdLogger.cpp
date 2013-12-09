@@ -10,7 +10,7 @@ Logger::Logger() {
     this->managerGamelleForceService->setListenUUID("");
     this->managerGamelleForceService->setCallBack(Logger::printGamelleForceService);
     this->managerGamelleNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
-    this->managerGamelleNewWeight->setCallBack( Logger::printGamelleNewWeight);
+    this->managerGamelleNewWeight->setCallBack(Logger::printGamelleNewWeight);
 }
 
 Logger::~Logger() {
@@ -50,17 +50,29 @@ void Logger::end() {
 }
 
 void Logger::printBalanceNewWeight(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
-
-}
-
-void Logger::printGamelleForceService(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
-
-}
-
-void Logger::printGamelleNewWeight(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
     qeo_animall_balance_NewWeight_t* msg = (qeo_animall_balance_NewWeight_t*) data;
     std::cout << "*****" << std::endl;
     std::cout << "*\t" << "BalanceWeightUpdate:" << std::endl;
+    std::cout << "*\t\t" << "uuid:" << "\t\t" << msg->uuid << std::endl;
+    std::cout << "*\t\t" << "weight:" << "\t\t" << msg->weight << std::endl;
+    std::cout << "*\t\t" << "timestamp:" << "\t" << msg->timestamp << std::endl;
+    std::cout << "*****" << std::endl;
+}
+
+void Logger::printGamelleForceService(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
+    qeo_animall_gamelle_ForceService_t* msg = (qeo_animall_gamelle_ForceService_t*) data;
+    std::cout << "*****" << std::endl;
+    std::cout << "*\t" << "ForceServiceUpdate:" << std::endl;
+    std::cout << "*\t\t" << "uuid:" << "\t\t" << msg->uuidGamelle << std::endl;
+    std::cout << "*\t\t" << "dose:" << "\t\t" << msg->dose << std::endl;
+    std::cout << "*\t\t" << "timestamp:" << "\t" << msg->timestamp << std::endl;
+    std::cout << "*****" << std::endl;
+}
+
+void Logger::printGamelleNewWeight(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
+    qeo_animall_gamelle_NewWeight_t* msg = (qeo_animall_gamelle_NewWeight_t*) data;
+    std::cout << "*****" << std::endl;
+    std::cout << "*\t" << "GamelleWeightUpdate:" << std::endl;
     std::cout << "*\t\t" << "uuid:" << "\t\t" << msg->uuid << std::endl;
     std::cout << "*\t\t" << "weight:" << "\t\t" << msg->weight << std::endl;
     std::cout << "*\t\t" << "timestamp:" << "\t" << msg->timestamp << std::endl;
