@@ -8,7 +8,15 @@
 #ifndef TOOLCMDBRIDGE_HPP
 #define	TOOLCMDBRIDGE_HPP
 
+namespace Tool {
+    namespace Cmd {
 
+        class Bridge {
+        public:
+            static void service();
+        };
+    }
+}
 
 #endif	/* TOOLCMDBRIDGE_HPP */
 

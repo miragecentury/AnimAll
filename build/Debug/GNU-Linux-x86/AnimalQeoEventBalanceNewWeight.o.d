@@ -1,5 +1,5 @@
-build/Debug/GNU-Linux-x86/AnimallQeoEventGamelleNewWeight.o: \
- AnimallQeoEventGamelleNewWeight.cpp AnimallQeoEventGamelleNewWeight.hpp \
+build/Debug/GNU-Linux-x86/AnimalQeoEventBalanceNewWeight.o: \
+ AnimalQeoEventBalanceNewWeight.cpp AnimallQeoEventBalanceNewWeight.hpp \
  AnimallQeoEvent.h ../../Documents/QeoSDK-0.15.0/c/include/qeo/types.h \
  ../../Documents/QeoSDK-0.15.0/c/include/dds/dds_tsm.h \
  ../../Documents/QeoSDK-0.15.0/c/include/dds/dds_types.h \
@@ -9,7 +9,7 @@ build/Debug/GNU-Linux-x86/AnimallQeoEventGamelleNewWeight.o: \
  ../../Documents/QeoSDK-0.15.0/c/include/qeo/api.h \
  ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h QeoEventWriter.hpp
 
-AnimallQeoEventGamelleNewWeight.hpp:
+AnimallQeoEventBalanceNewWeight.hpp:
 
 AnimallQeoEvent.h:
 

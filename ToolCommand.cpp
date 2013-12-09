@@ -1,5 +1,4 @@
 #include "ToolCommand.hpp"
-#include "ToolCmdGamelle.hpp"
 
 using namespace Tool;
 
@@ -21,6 +20,12 @@ void Command::dispath(int argc, char** argv, std::string firstArg) {
     std::string cmdTv = "tv";
     std::string cmdPhone = "phone";
     std::string cmdPorte = "porte";
+    std::string cmdLogger = "logger";
+
+    if (exec == false && !cmdLogger.compare(firstArg)) {
+        exec = true;
+        Command::cmdLogger(argc, argv);
+    }
 
     if (exec == false && !cmdBalance.compare(firstArg)) {
         exec = true;
@@ -120,4 +125,16 @@ void Command::cmdTv(int argc, char** argv) {
 void Command::cmdTvHelp() {
     std::cout << "Help: tv" << std::endl;
     std::cout << "\t- " << "balance" << "\t : " << "pilotage de la balance";
+}
+
+void Command::cmdLogger(int argc, char** argv) {
+    std::string cmdExit = "exit";
+    std::string tmp = "";
+    Tool::Cmd::Logger * logger = new Tool::Cmd::Logger();
+    logger->start();
+    do {
+        std::cin >> tmp;
+    } while (cmdExit.compare(tmp));
+    logger->end();
+    delete(logger);
 }

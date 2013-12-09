@@ -19,3 +19,11 @@ std::string Api::getCurrentTimeStampStr() {
     delete os;
     return timestampStr;
 }
+
+std::string Api::convertFloatToString(float val) {
+
+}
+
+std::string Api::convertIntToString(int val) {
+
+}

@@ -10,7 +10,10 @@
 
 namespace Tool {
     namespace Cmd {
-
+        class Balance{
+        public:
+            static void service();
+        };
     }
 }
 

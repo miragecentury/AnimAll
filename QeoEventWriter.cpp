@@ -2,7 +2,7 @@
 
 using namespace Qeo::Event;
 
-Writer::Writer(qeo_factory_t* qeo, void* msgType) {
+Writer::Writer(qeo_factory_t* qeo, const DDS_TypeSupport_meta * msgType) {
     this->qeo = qeo;
     this->msgType = msgType;
     this->init();
@@ -19,7 +19,7 @@ void Writer::init() {
     sleep(2);
 }
 
-bool Writer::send(void* msg) {
+bool Writer::send(const void * msg) {
     if (qeo_event_writer_write(this->qeoEventWriter, msg) == QEO_OK) {
         return true;
     } else {

@@ -20,16 +20,16 @@ namespace Qeo {
 
         class Writer {
         public:
-            Writer(qeo_factory_t* qeo, void* msgType);
+            Writer(qeo_factory_t* qeo, const DDS_TypeSupport_meta * msgType);
             ~Writer();
             /**/
-            bool send(void* msg);
+            bool send(const void * msg);
         private:
             void init();
         protected:
             qeo_factory_t* qeo;
             qeo_event_writer_t* qeoEventWriter;
-            void* msgType;
+            const DDS_TypeSupport_meta * msgType;
         };
     }
 }

@@ -8,6 +8,11 @@
 #include <string>
 #include <iostream>
 
+#include "ToolCmdGamelle.hpp"
+#include "ToolCmdBalance.hpp"
+#include "ToolCmdBridge.hpp"
+#include "ToolCmdLogger.hpp"
+
 #ifndef TOOLCOMMAND_HPP
 #define	TOOLCOMMAND_HPP
 
@@ -28,6 +33,7 @@ namespace Tool {
         static void cmdBridgeHelp();
         static void cmdTv(int argc, char** argv);
         static void cmdTvHelp();
+        static void cmdLogger(int argc, char** argv);
         /**/
     };
 }

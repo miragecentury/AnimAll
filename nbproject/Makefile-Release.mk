@@ -35,16 +35,23 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o \
 	${OBJECTDIR}/AnimallApi.o \
 	${OBJECTDIR}/AnimallDeviceBridge.o \
 	${OBJECTDIR}/AnimallDeviceGamelle.o \
 	${OBJECTDIR}/AnimallQeoEvent.o \
+	${OBJECTDIR}/AnimallQeoEventGamelleForceService.o \
 	${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o \
 	${OBJECTDIR}/QeoEventReader.o \
 	${OBJECTDIR}/QeoEventWriter.o \
+	${OBJECTDIR}/ToolCmdBalance.o \
+	${OBJECTDIR}/ToolCmdBridge.o \
 	${OBJECTDIR}/ToolCmdGamelle.o \
+	${OBJECTDIR}/ToolCmdLogger.o \
 	${OBJECTDIR}/ToolCommand.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/feeder.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/scale.o
 
 
 # C Compiler Flags
@@ -71,6 +78,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o: AnimalQeoEventBalanceNewWeight.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o AnimalQeoEventBalanceNewWeight.cpp
+
 ${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -91,6 +103,11 @@ ${OBJECTDIR}/AnimallQeoEvent.o: AnimallQeoEvent.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
 
+${OBJECTDIR}/AnimallQeoEventGamelleForceService.o: AnimallQeoEventGamelleForceService.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventGamelleForceService.o AnimallQeoEventGamelleForceService.cpp
+
 ${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o: AnimallQeoEventGamelleNewWeight.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -106,20 +123,45 @@ ${OBJECTDIR}/QeoEventWriter.o: QeoEventWriter.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
 
+${OBJECTDIR}/ToolCmdBalance.o: ToolCmdBalance.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdBalance.o ToolCmdBalance.cpp
+
+${OBJECTDIR}/ToolCmdBridge.o: ToolCmdBridge.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdBridge.o ToolCmdBridge.cpp
+
 ${OBJECTDIR}/ToolCmdGamelle.o: ToolCmdGamelle.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdGamelle.o ToolCmdGamelle.cpp
+
+${OBJECTDIR}/ToolCmdLogger.o: ToolCmdLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdLogger.o ToolCmdLogger.cpp
 
 ${OBJECTDIR}/ToolCommand.o: ToolCommand.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCommand.o ToolCommand.cpp
 
+${OBJECTDIR}/feeder.o: feeder.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/feeder.o feeder.c
+
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/scale.o: scale.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/scale.o scale.c
 
 # Subprojects
 .build-subprojects:

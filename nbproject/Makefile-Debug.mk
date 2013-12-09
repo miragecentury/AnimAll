@@ -35,16 +35,23 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o \
 	${OBJECTDIR}/AnimallApi.o \
 	${OBJECTDIR}/AnimallDeviceBridge.o \
 	${OBJECTDIR}/AnimallDeviceGamelle.o \
 	${OBJECTDIR}/AnimallQeoEvent.o \
+	${OBJECTDIR}/AnimallQeoEventGamelleForceService.o \
 	${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o \
 	${OBJECTDIR}/QeoEventReader.o \
 	${OBJECTDIR}/QeoEventWriter.o \
+	${OBJECTDIR}/ToolCmdBalance.o \
+	${OBJECTDIR}/ToolCmdBridge.o \
 	${OBJECTDIR}/ToolCmdGamelle.o \
+	${OBJECTDIR}/ToolCmdLogger.o \
 	${OBJECTDIR}/ToolCommand.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/feeder.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/scale.o
 
 
 # C Compiler Flags
@@ -61,7 +68,7 @@ FFLAGS=
 ASFLAGS=--32
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L../../Documents/QeoSDK-0.15.0/c/lib ../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeo.so ../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeoutil.so -lpthread
+LDLIBSOPTIONS=-L../../Documents/QeoSDK-0.15.0/c/lib -L../../Documents/wiringPi/wiringPi ../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeo.so ../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeoutil.so -lpthread ../../Documents/wiringPi/wiringPi/libwiringPi.so
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -71,59 +78,96 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ../../Documents/QeoSDK-0.15.
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeoutil.so
 
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ../../Documents/wiringPi/wiringPi/libwiringPi.so
+
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o: AnimalQeoEventBalanceNewWeight.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o AnimalQeoEventBalanceNewWeight.cpp
+
 ${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallApi.o AnimallApi.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallApi.o AnimallApi.cpp
 
 ${OBJECTDIR}/AnimallDeviceBridge.o: AnimallDeviceBridge.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceBridge.o AnimallDeviceBridge.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceBridge.o AnimallDeviceBridge.cpp
 
 ${OBJECTDIR}/AnimallDeviceGamelle.o: AnimallDeviceGamelle.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceGamelle.o AnimallDeviceGamelle.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallDeviceGamelle.o AnimallDeviceGamelle.cpp
 
 ${OBJECTDIR}/AnimallQeoEvent.o: AnimallQeoEvent.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
+	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
+
+${OBJECTDIR}/AnimallQeoEventGamelleForceService.o: AnimallQeoEventGamelleForceService.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventGamelleForceService.o AnimallQeoEventGamelleForceService.cpp
 
 ${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o: AnimallQeoEventGamelleNewWeight.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o AnimallQeoEventGamelleNewWeight.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o AnimallQeoEventGamelleNewWeight.cpp
 
 ${OBJECTDIR}/QeoEventReader.o: QeoEventReader.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventReader.o QeoEventReader.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventReader.o QeoEventReader.cpp
 
 ${OBJECTDIR}/QeoEventWriter.o: QeoEventWriter.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QeoEventWriter.o QeoEventWriter.cpp
+
+${OBJECTDIR}/ToolCmdBalance.o: ToolCmdBalance.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdBalance.o ToolCmdBalance.cpp
+
+${OBJECTDIR}/ToolCmdBridge.o: ToolCmdBridge.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdBridge.o ToolCmdBridge.cpp
 
 ${OBJECTDIR}/ToolCmdGamelle.o: ToolCmdGamelle.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdGamelle.o ToolCmdGamelle.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdGamelle.o ToolCmdGamelle.cpp
+
+${OBJECTDIR}/ToolCmdLogger.o: ToolCmdLogger.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCmdLogger.o ToolCmdLogger.cpp
 
 ${OBJECTDIR}/ToolCommand.o: ToolCommand.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCommand.o ToolCommand.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ToolCommand.o ToolCommand.cpp
+
+${OBJECTDIR}/feeder.o: feeder.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/feeder.o feeder.c
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -s -I../../Documents/QeoSDK-0.15.0/c/include -I../../Documents/wiringPi -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/scale.o: scale.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../Documents/QeoSDK-0.15.0/c/include -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/scale.o scale.c
 
 # Subprojects
 .build-subprojects:

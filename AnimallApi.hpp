@@ -26,6 +26,8 @@ namespace Animall {
         void balancePush(std::string uuid, float weight);
     private:
         std::string getCurrentTimeStampStr();
+        std::string convertFloatToString(float val);
+        std::string convertIntToString(int val);
     };
 }
 

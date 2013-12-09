@@ -25,8 +25,8 @@ namespace Animall {
             Bridge();
             ~Bridge();
             /**/
-            void callbackGamelleNewWeight();
-            void callbackBalanceNewWeight();
+            void callbackGamelleNewWeight(const qeo_event_reader_t *reader, const void *data, uintptr_t userdata);
+            void callbackBalanceNewWeight(const qeo_event_reader_t *reader, const void *data, uintptr_t userdata);
             /**/
         private:
             /**/

@@ -1,5 +1,5 @@
 /* 
- * File:   AnimallQeoEventGamelleNewWeight.hpp
+ * File:   AnimallQeoEventGamelleForceService.hpp
  * Author: zeus
  *
  */
@@ -21,34 +21,34 @@ extern "C" {
 
 using namespace Qeo::Event;
 
-#ifndef ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP
-#define	ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP
+#ifndef ANIMALLQEOEVENTGAMELLEFORCESERVICE_HPP
+#define	ANIMALLQEOEVENTGAMELLEFORCESERVICE_HPP
 
 namespace Animall {
     namespace Qeo {
         namespace Gamelle {
 
-            class NewWeight {
+            class ForceService {
             public:
-                NewWeight(qeo_factory_t* qeo, bool listener, bool sender);
-                void publish(float newweight);
-                void setSenderUUID(std::string uuid);
+                ForceService(qeo_factory_t* qeo, bool listener, bool sender);
+                void setListenUUID(std::string uuid);
+                void publish(std::string uuid, int dose);
                 void setCallBack(qeo_event_on_data_callback callback);
                 void startListen();
                 void closeListen();
-                ~NewWeight();
+                ~ForceService();
+                static std::string uuid;
             private:
 
                 Reader* reader = NULL;
                 Writer* writer = NULL;
                 qeo_factory_t* qeo;
-                std::string uuidSender = "";
+                std::string uuidListen;
             };
 
-            void NewWeightThread(NewWeight* list);
         }
     }
 }
 
-#endif	/* ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP */
+#endif	/* ANIMALLQEOEVENTGAMELLEFORCESERVICE_HPP */
 

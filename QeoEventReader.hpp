@@ -20,18 +20,18 @@ namespace Qeo {
 
         class Reader {
         public:
-            Reader(qeo_factory_t* qeo, void* callback, void* event);
+            Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DDS_TypeSupport_meta * event);
             ~Reader();
+             void start();
+            void stop();
         private:
             void factory();
-            void start();
-            void stop();
         protected:
             qeo_factory_t* qeo = NULL;
             qeo_event_reader_t* qeoEventReader = NULL;
-            qeo_event_reader_listener_t* qeoEventReaderListener = NULL;
-            void* event = NULL;
-            void* callback = NULL;
+            qeo_event_reader_listener_t qeoEventReaderListener;
+            const DDS_TypeSupport_meta * event = NULL;
+            qeo_event_on_data_callback callback = NULL;
         };
     }
 }

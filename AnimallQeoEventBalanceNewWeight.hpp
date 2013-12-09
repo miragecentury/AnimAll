@@ -1,7 +1,8 @@
 /* 
- * File:   AnimallQeoEventGamelleNewWeight.hpp
+ * File:   AnimallQeoEventBalanceNewWeight.hpp
  * Author: zeus
  *
+ * Created on 9 décembre 2013, 11:34
  */
 
 #include "AnimallQeoEvent.h"
@@ -21,19 +22,19 @@ extern "C" {
 
 using namespace Qeo::Event;
 
-#ifndef ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP
-#define	ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP
+#ifndef ANIMALLQEOEVENTBALANCENEWWEIGHT_HPP
+#define	ANIMALLQEOEVENTBALANCENEWWEIGHT_HPP
 
 namespace Animall {
     namespace Qeo {
-        namespace Gamelle {
+        namespace Balance {
 
             class NewWeight {
             public:
                 NewWeight(qeo_factory_t* qeo, bool listener, bool sender);
                 void publish(float newweight);
-                void setSenderUUID(std::string uuid);
                 void setCallBack(qeo_event_on_data_callback callback);
+                void setSenderUUID(std::string uuid);
                 void startListen();
                 void closeListen();
                 ~NewWeight();
@@ -46,9 +47,10 @@ namespace Animall {
             };
 
             void NewWeightThread(NewWeight* list);
+
         }
     }
 }
 
-#endif	/* ANIMALLQEOEVENTGAMELLENEWWEIGHT_HPP */
+#endif	/* ANIMALLQEOEVENTBALANCENEWWEIGHT_HPP */
 
