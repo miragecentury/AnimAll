@@ -22,6 +22,14 @@ CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/animall
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
 CND_PACKAGE_NAME_Release=animall.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/animall.tar
+# ARM configuration
+CND_PLATFORM_ARM=GNU-Linux-x86
+CND_ARTIFACT_DIR_ARM=dist/ARM/GNU-Linux-x86
+CND_ARTIFACT_NAME_ARM=animall
+CND_ARTIFACT_PATH_ARM=dist/ARM/GNU-Linux-x86/animall
+CND_PACKAGE_DIR_ARM=dist/ARM/GNU-Linux-x86/package
+CND_PACKAGE_NAME_ARM=animall.tar
+CND_PACKAGE_PATH_ARM=dist/ARM/GNU-Linux-x86/package/animall.tar
 #
 # include compiler specific variables
 #
