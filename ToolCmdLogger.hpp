@@ -5,6 +5,8 @@
  * Created on 25 novembre 2013, 11:53
  */
 
+#include <iostream>
+
 #include "AnimallQeoEventBalanceNewWeight.hpp"
 #include "AnimallQeoEventGamelleForceService.hpp"
 #include "AnimallQeoEventBalanceNewWeight.hpp"

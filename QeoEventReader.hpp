@@ -6,6 +6,7 @@
  */
 
 #include <cstdlib>
+#include <iostream>
 
 extern "C" {
 #include <qeo/factory.h>

@@ -7,7 +7,8 @@ build/Debug/GNU-Linux-x86/AnimallDeviceBridge.o: AnimallDeviceBridge.cpp \
  ../../Documents/QeoSDK-0.15.0/c/include/dds/dds_error.h \
  QeoEventReader.hpp ../../Documents/QeoSDK-0.15.0/c/include/qeo/factory.h \
  ../../Documents/QeoSDK-0.15.0/c/include/qeo/api.h \
- ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h QeoEventWriter.hpp
+ ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h QeoEventWriter.hpp \
+ AnimallQeoEventBalanceNewWeight.hpp
 
 AnimallDeviceBridge.hpp:
 
@@ -34,3 +35,5 @@ QeoEventReader.hpp:
 ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h:
 
 QeoEventWriter.hpp:
+
+AnimallQeoEventBalanceNewWeight.hpp:

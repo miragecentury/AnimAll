@@ -10,6 +10,7 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include <softPwm.h>
+#include <pthread.h>
 #include <stdbool.h>
 
 #ifndef _SCALE_H_
@@ -31,6 +32,14 @@ bool bScale_setup();
  * @return true on success, false otherwise.
  */
 bool bScale_getWeight(int * const iMeasuredWeight);
+
+/**
+ * @brief Set the current weight as reference. (Tare the scale)
+ * Should be called some seconds after initialization.
+ *
+ * @return Nothing
+ */
+void vScale_tareScale();
 
 /**
  * @brief Cleanup Scale I/O layer. Must be called before exiting.

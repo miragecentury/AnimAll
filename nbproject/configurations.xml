@@ -529,20 +529,30 @@
             flavor2="0">
       </item>
       <item path="AnimalQeoEventBalanceNewWeight.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallApi.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallApi.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallDeviceBridge.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallDeviceGamelle.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallDevicePhone.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallDevicePorte.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="AnimallQeoEvent.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+        </cTool>
       </item>
       <item path="AnimallQeoEvent.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -557,6 +567,8 @@
             ex="false"
             tool="1"
             flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallQeoEventGamelleForceService.hpp"
             ex="false"
@@ -567,6 +579,8 @@
             ex="false"
             tool="1"
             flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="AnimallQeoEventGamelleNewWeight.hpp"
             ex="false"
@@ -574,26 +588,46 @@
             flavor2="0">
       </item>
       <item path="QeoEventReader.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="QeoEventWriter.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="ToolCmdBalance.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="ToolCmdBridge.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="ToolCmdGamelle.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="ToolCmdLogger.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="ToolCommand.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="feeder.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+        </cTool>
       </item>
       <item path="feeder.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool>
+        </ccTool>
       </item>
       <item path="scale.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+        </cTool>
       </item>
       <item path="scale.h" ex="false" tool="3" flavor2="0">
       </item>

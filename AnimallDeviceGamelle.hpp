@@ -7,6 +7,7 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
+#include <exception>
 #include "AnimallQeoEventGamelleNewWeight.hpp"
 #include "AnimallQeoEventGamelleForceService.hpp"
 
@@ -23,11 +24,9 @@ extern "C" {
 namespace Animall {
     namespace Device {
 
-        class GamelleMat;
-
         class Gamelle {
         public:
-            Gamelle();
+            Gamelle(bool balance, bool distributeur);
             void run();
             void publishNewWeight(float newweight);
             void distribute(int cycle);
@@ -37,24 +36,16 @@ namespace Animall {
             void static threadcheck(Gamelle* gamelle);
             bool needClose = false;
         private:
-
+            bool balance;
+            bool distributeur;
             std::thread* threadCheckWight;
             qeo_factory_t* qeo = NULL;
-            GamelleMat* mat = NULL;
             std::string uuid = "";
             std::string initUUID();
             std::string getUUID();
             std::string generateUUID();
             Animall::Qeo::Gamelle::NewWeight* eventManagerNewWeight = NULL;
             Animall::Qeo::Gamelle::ForceService* eventManagerForceService = NULL;
-        };
-
-        class GamelleMat {
-        public:
-            GamelleMat(Gamelle* gamelle);
-            ~GamelleMat();
-        private:
-            Gamelle* gamelle = NULL;
         };
 
     }

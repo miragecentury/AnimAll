@@ -10,7 +10,7 @@ ForceService::ForceService(qeo_factory_t* qeo, bool listener, bool sender) {
         this->reader = NULL; //to setcallback
     }
     if (sender == true) {
-
+        this->writer = new Writer(this->qeo, qeo_animall_gamelle_ForceService_type);
     }
 }
 
@@ -29,11 +29,15 @@ void ForceService::setListenUUID(std::string uuid) {
 
 /* TODO */
 void ForceService::publish(std::string uuid, int dose) {
-
+    qeo_animall_gamelle_ForceService_t msg;
+    msg.dose = dose;
+    msg.uuidGamelle = (char *) uuid.c_str();
+    msg.timestamp = (int32_t) time(NULL);
+    this->writer->send(&msg);
 }
 
 void ForceService::setCallBack(qeo_event_on_data_callback callback) {
-    this->reader = new Reader(this->qeo, callback, qeo_animall_gamelle_ForceService_type);
+    this->reader = new Reader(this->qeo, (qeo_event_on_data_callback) callback, qeo_animall_gamelle_ForceService_type);
 }
 
 void ForceService::startListen() {

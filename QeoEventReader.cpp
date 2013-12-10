@@ -27,6 +27,7 @@ void Reader::factory() {
 }
 
 void Reader::start() {
+    std::cout << "Reader::Start" << std::endl;
     this->qeoEventReader = qeo_factory_create_event_reader(this->qeo, this->event, &this->qeoEventReaderListener, 0);
 }
 

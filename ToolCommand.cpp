@@ -110,7 +110,31 @@ void Command::cmdBridgeHelp() {
 }
 
 void Command::cmdGamelle(int argc, char** argv) {
-    Tool::Cmd::Gamelle::service();
+    bool exec = false;
+    std::string serviceCmd = "service";
+    std::string newweightCmd = "newweight";
+    std::string forceserviceCmd = "forceservice";
+    std::string balanceCmd = "balance";
+    std::string distributeurCmd = "distributeur";
+    //    Tool::Cmd::Gamelle::service();
+
+    if (argc >= 3) {
+        if (!exec && !serviceCmd.compare(argv[2]))
+            if (argc >= 4) {
+                if (!balanceCmd.compare(argv[3])) {
+                    Tool::Cmd::Gamelle::service(true, false);
+                }
+                if (!distributeurCmd.compare(argv[3])) {
+                    Tool::Cmd::Gamelle::service(false, true);
+                }
+            } else {
+                Tool::Cmd::Gamelle::service(true, true);
+            }
+        if (!exec && !forceserviceCmd.compare(argv[2])) {
+            Tool::Cmd::Gamelle::forceservice(std::string("7e5516bd-bc3b-4e16-bcb1-f83159a1993b"), 1);
+        }
+    } else {
+    }
 }
 
 void Command::cmdGamelleHelp() {
@@ -128,13 +152,15 @@ void Command::cmdTvHelp() {
 }
 
 void Command::cmdLogger(int argc, char** argv) {
-    std::string cmdExit = "exit";
-    std::string tmp = "";
+    std::string cmdExit = std::string("exit");
+    std::string tmp = std::string("");
     Tool::Cmd::Logger * logger = new Tool::Cmd::Logger();
+    std::cout << "Logger : Init" << std::endl;
     logger->start();
     do {
         std::cin >> tmp;
     } while (cmdExit.compare(tmp));
+    std::cout << "Logger : Exit" << std::endl;
     logger->end();
     delete(logger);
 }

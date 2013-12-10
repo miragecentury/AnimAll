@@ -4,13 +4,17 @@ using namespace Tool::Cmd;
 
 Logger::Logger() {
     this->qeo = qeo_factory_create();
+    std::cout << "End of qeo factory create" << std::endl;
     this->managerBalanceNewWeight = new Animall::Qeo::Balance::NewWeight(this->qeo, true, false);
     this->managerBalanceNewWeight->setCallBack(Logger::printBalanceNewWeight);
+    std::cout << "End of Balance NewWeight" << std::endl;
     this->managerGamelleForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false);
     this->managerGamelleForceService->setListenUUID("");
     this->managerGamelleForceService->setCallBack(Logger::printGamelleForceService);
+    std::cout << "End of Gamelle Forceservice" << std::endl;
     this->managerGamelleNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
     this->managerGamelleNewWeight->setCallBack(Logger::printGamelleNewWeight);
+    std::cout << "End of Gamelle NewWeight" << std::endl;
 }
 
 Logger::~Logger() {
@@ -35,11 +39,13 @@ Logger::~Logger() {
 }
 
 void Logger::start() {
-
     this->stateListen = true;
     this->managerBalanceNewWeight->startListen();
+    std::cout << "Start Listen Balance NewWeight" << std::endl;
     this->managerGamelleForceService->startListen();
+    std::cout << "Start Listen Gamelle ForceService" << std::endl;
     this->managerGamelleNewWeight->startListen();
+    std::cout << "Start Listen Gamelle NewWeight" << std::endl;
 }
 
 void Logger::end() {
@@ -62,7 +68,7 @@ void Logger::printBalanceNewWeight(const qeo_event_reader_t* reader, const void*
 void Logger::printGamelleForceService(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
     qeo_animall_gamelle_ForceService_t* msg = (qeo_animall_gamelle_ForceService_t*) data;
     std::cout << "*****" << std::endl;
-    std::cout << "*\t" << "ForceServiceUpdate:" << std::endl;
+    std::cout << "*\t" << "GamelleForceServiceUpdate:" << std::endl;
     std::cout << "*\t\t" << "uuid:" << "\t\t" << msg->uuidGamelle << std::endl;
     std::cout << "*\t\t" << "dose:" << "\t\t" << msg->dose << std::endl;
     std::cout << "*\t\t" << "timestamp:" << "\t" << msg->timestamp << std::endl;
