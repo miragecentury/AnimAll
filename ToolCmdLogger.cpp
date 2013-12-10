@@ -4,16 +4,13 @@ using namespace Tool::Cmd;
 
 Logger::Logger() {
     this->qeo = qeo_factory_create();
-    sleep(2);
     std::cout << "End of qeo factory create" << std::endl;
     this->managerBalanceNewWeight = new Animall::Qeo::Balance::NewWeight(this->qeo, true, false);
     this->managerBalanceNewWeight->setCallBack(Logger::printBalanceNewWeight);
     std::cout << "End of Balance NewWeight" << std::endl;
-    sleep(2);
     this->managerGamelleForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false);
     this->managerGamelleForceService->setListenUUID(std::string(""));
     this->managerGamelleForceService->setCallBack(Logger::printGamelleForceService);
-    sleep(2);
     std::cout << "End of Gamelle Forceservice" << std::endl;
     this->managerGamelleNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
     this->managerGamelleNewWeight->setCallBack(Logger::printGamelleNewWeight);
@@ -44,8 +41,10 @@ Logger::~Logger() {
 void Logger::start() {
     this->stateListen = true;
     this->managerBalanceNewWeight->startListen();
+    sleep(2);
     std::cout << "Start Listen Balance NewWeight" << std::endl;
     this->managerGamelleForceService->startListen();
+    sleep(2);
     std::cout << "Start Listen Gamelle ForceService" << std::endl;
     this->managerGamelleNewWeight->startListen();
     std::cout << "Start Listen Gamelle NewWeight" << std::endl;
