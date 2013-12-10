@@ -9,7 +9,7 @@ Logger::Logger() {
     this->managerBalanceNewWeight->setCallBack(Logger::printBalanceNewWeight);
     std::cout << "End of Balance NewWeight" << std::endl;
     this->managerGamelleForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false);
-    this->managerGamelleForceService->setListenUUID("");
+    this->managerGamelleForceService->setListenUUID(std::string(""));
     this->managerGamelleForceService->setCallBack(Logger::printGamelleForceService);
     std::cout << "End of Gamelle Forceservice" << std::endl;
     this->managerGamelleNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);

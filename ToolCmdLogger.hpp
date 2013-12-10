@@ -14,8 +14,8 @@
 
 extern "C" {
 #include "AnimallQeoEvent.h"
-#include <qeo/api.h>
-#include <qeo/factory.h>
+#include "qeo/api.h"
+#include "qeo/factory.h"
 }
 
 #ifndef TOOLCMDLOGGER_HPP
