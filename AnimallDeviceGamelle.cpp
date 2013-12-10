@@ -20,7 +20,8 @@ Gamelle::Gamelle(bool balance, bool distributeur) {
         this->distributeur = true;
         this->eventManagerForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false); //listener
         this->eventManagerForceService->setListenUUID(this->uuid);
-        this->eventManagerForceService->setCallBack(Gamelle::callback);
+        this->eventManagerForceService->setCallBack((qeo_event_on_data_callback) Gamelle::callback);
+        std::cout << "End Init Distributeur" << std::endl;
     }
     std::cout << "Serivce : Gamelle : UUID : " << this->uuid << std::endl;
 }
@@ -121,7 +122,9 @@ void Gamelle::run() {
         std::cin >> tmp;
     } while (cmdExit.compare(tmp));
     this->needClose = true;
-    this->threadCheckWight->join();
+    if (this->balance) {
+        this->threadCheckWight->join();
+    }
 }
 
 void Gamelle::publishNewWeight(float newweight) {

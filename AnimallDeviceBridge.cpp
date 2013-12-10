@@ -3,6 +3,8 @@
 using namespace Animall::Device;
 
 Bridge::Bridge() {
+    std::string cmdExit = "exit";
+    std::string tmp = "";
     this->qeo = qeo_factory_create();
 
     this->BnewWeight = new Animall::Qeo::Balance::NewWeight(this->qeo, true, false);
@@ -11,11 +13,10 @@ Bridge::Bridge() {
     this->GnewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
     this->GnewWeight->setCallBack(Bridge::callbackGamelleNewWeight);
 
-    this->startListenBalanceNewWeight();
+    //    this->startListenBalanceNewWeight();
     this->startListenGamelleNewWeight();
 
-    std::string cmdExit = "exit";
-    std::string tmp = "";
+
     std::cout << "Service : Bridge : Active" << std::endl;
     do {
         std::cin >> tmp;

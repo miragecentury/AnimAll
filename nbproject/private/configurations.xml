@@ -27,8 +27,10 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" logger</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" gamelle</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" bridge</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" gamelle service distributeur</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" gamelle</runcommand>
+        <runcommand>"${OUTPUT_PATH}" gamelle service distributeur</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
