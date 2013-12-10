@@ -16,6 +16,7 @@ extern "C" {
 #include "qeo/factory.h"
 #include "feeder.h"
 #include "scale.h"
+#include "AnimallQeoEvent.h"
 }
 
 #ifndef ANIMALLDEVICEGAMELLE_HPP

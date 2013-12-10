@@ -7,9 +7,11 @@ std::string ForceService::uuid = "";
 ForceService::ForceService(qeo_factory_t* qeo, bool listener, bool sender) {
     this->qeo = qeo;
     if (listener == true) {
+        std::cout << "Listen Active" << std::endl;
         this->reader = NULL; //to setcallback
     }
     if (sender == true) {
+        std::cout << "Writer Active" << std::endl;
         this->writer = new Writer(this->qeo, qeo_animall_gamelle_ForceService_type);
     }
 }
