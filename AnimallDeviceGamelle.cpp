@@ -13,6 +13,7 @@ Gamelle::Gamelle(bool balance, bool distributeur) {
         this->balance = true;
         this->eventManagerNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, false, true); //sender
         this->eventManagerNewWeight->setSenderUUID(this->uuid);
+        this->threadCheckWight = new std::thread(Gamelle::threadcheck, this);
     }
     if (distributeur) {
         std::cout << "Distributeur Active" << std::endl;
@@ -20,8 +21,6 @@ Gamelle::Gamelle(bool balance, bool distributeur) {
         this->eventManagerForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false); //listener
         this->eventManagerForceService->setListenUUID(this->uuid);
         this->eventManagerForceService->setCallBack(Gamelle::callback);
-
-        this->threadCheckWight = new std::thread(Gamelle::threadcheck, this);
     }
     std::cout << "Serivce : Gamelle : UUID : " << this->uuid << std::endl;
 }
@@ -72,11 +71,12 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
     while (gamelle->needClose != true) {
         if (matInit) {
             bScale_getWeight(&new_weight);
-            std::cout << "W:" << new_weight << std::endl;
+            std::cout << "W: " << new_weight << " old: " << weight << std::endl;
             if (new_weight < 0) {
                 new_weight = 0;
             }
-            if (new_weight > (weight + 15) && new_weight < (weight - 15)) {
+            if (new_weight > (weight + 15) || new_weight < (weight - 15)) {
+                std::cout << "Publish " << new_weight << std::endl;
                 gamelle->publishNewWeight((float) new_weight);
             } else {
                 weight = new_weight;
