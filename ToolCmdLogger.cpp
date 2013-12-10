@@ -40,7 +40,7 @@ Logger::~Logger() {
 
 void Logger::start() {
     this->stateListen = true;
-    this->managerBalanceNewWeight->startListen();
+    //this->managerBalanceNewWeight->startListen();
     sleep(2);
     std::cout << "Start Listen Balance NewWeight" << std::endl;
     this->managerGamelleForceService->startListen();
