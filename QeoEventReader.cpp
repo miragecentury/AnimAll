@@ -15,9 +15,6 @@ Reader::~Reader() {
         if (this->qeoEventReader != NULL) {
             qeo_event_reader_close(this->qeoEventReader);
         }
-        if (this->qeoEventReaderListener != NULL) {
-            free(this->qeoEventReaderListener);
-        }
 }
 
 void Reader::factory() {
