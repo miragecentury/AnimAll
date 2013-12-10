@@ -9,7 +9,7 @@ Logger::Logger() {
     this->managerBalanceNewWeight->setCallBack(Logger::printBalanceNewWeight);
     std::cout << "End of Balance NewWeight" << std::endl;
     this->managerGamelleForceService = new Animall::Qeo::Gamelle::ForceService(this->qeo, true, false);
-    this->managerGamelleForceService->setListenUUID(std::string(""));
+    this->managerGamelleForceService->setListenUUID(std::string("7e5516bd-bc3b-4e16-bcb1-f83159a1993b"));
     this->managerGamelleForceService->setCallBack(Logger::printGamelleForceService);
     std::cout << "End of Gamelle Forceservice" << std::endl;
     this->managerGamelleNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
@@ -40,11 +40,9 @@ Logger::~Logger() {
 
 void Logger::start() {
     this->stateListen = true;
-    //this->managerBalanceNewWeight->startListen();
-    sleep(2);
+    this->managerBalanceNewWeight->startListen();
     std::cout << "Start Listen Balance NewWeight" << std::endl;
-    //this->managerGamelleForceService->startListen();
-    sleep(2);
+    this->managerGamelleForceService->startListen();
     std::cout << "Start Listen Gamelle ForceService" << std::endl;
     this->managerGamelleNewWeight->startListen();
     std::cout << "Start Listen Gamelle NewWeight" << std::endl;
@@ -52,8 +50,8 @@ void Logger::start() {
 
 void Logger::end() {
     this->stateListen = false;
-    //this->managerBalanceNewWeight->closeListen();
-    //this->managerGamelleForceService->closeListen();
+    this->managerBalanceNewWeight->closeListen();
+    this->managerGamelleForceService->closeListen();
     this->managerGamelleNewWeight->closeListen();
 }
 
