@@ -32,7 +32,7 @@ namespace Qeo {
         protected:
             qeo_factory_t* qeo = NULL;
             qeo_event_reader_t* qeoEventReader = NULL;
-            qeo_event_reader_listener_t qeoEventReaderListener;
+            qeo_event_reader_listener_t* qeoEventReaderListener;
             const DDS_TypeSupport_meta * event = NULL;
             qeo_event_on_data_callback callback = NULL;
         };
