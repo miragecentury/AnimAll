@@ -71,6 +71,7 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
     while (gamelle->needClose != true) {
         if (matInit) {
             bScale_getWeight(&new_weight);
+            std::cout << "W:" << new_weight << std::endl;
             if (new_weight < 0) {
                 new_weight = 0;
             }
@@ -93,6 +94,12 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
 
 Gamelle::~Gamelle() {
     std::cout << "Service : Gamelle : on Closing" << std::endl;
+    if (this->balance) {
+        delete(this->eventManagerNewWeight);
+    }
+    if (this->distributeur) {
+        delete(this->eventManagerForceService);
+    }
     if (this->qeo != NULL) {
         qeo_factory_close(this->qeo);
     }
