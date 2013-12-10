@@ -43,17 +43,17 @@ void Logger::start() {
     //this->managerBalanceNewWeight->startListen();
     sleep(2);
     std::cout << "Start Listen Balance NewWeight" << std::endl;
-    this->managerGamelleForceService->startListen();
+    //this->managerGamelleForceService->startListen();
     sleep(2);
     std::cout << "Start Listen Gamelle ForceService" << std::endl;
-    //this->managerGamelleNewWeight->startListen();
+    this->managerGamelleNewWeight->startListen();
     std::cout << "Start Listen Gamelle NewWeight" << std::endl;
 }
 
 void Logger::end() {
     this->stateListen = false;
-    this->managerBalanceNewWeight->closeListen();
-    this->managerGamelleForceService->closeListen();
+    //this->managerBalanceNewWeight->closeListen();
+    //this->managerGamelleForceService->closeListen();
     this->managerGamelleNewWeight->closeListen();
 }
 
