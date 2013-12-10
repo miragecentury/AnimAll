@@ -4,6 +4,8 @@ using namespace Animall::Qeo::Gamelle;
 
 NewWeight::NewWeight(qeo_factory_t* qeo, bool listener, bool sender) {
     this->qeo = qeo;
+    this->reader = NULL;
+    this->reader = NULL;
     if (listener == true) {
         this->reader = NULL; //set at setCallBack
     }
