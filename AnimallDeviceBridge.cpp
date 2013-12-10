@@ -11,6 +11,16 @@ Bridge::Bridge() {
     this->GnewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
     this->GnewWeight->setCallBack(Bridge::callbackGamelleNewWeight);
 
+    this->startListenBalanceNewWeight();
+    this->startListenGamelleNewWeight();
+
+    std::string cmdExit = "exit";
+    std::string tmp = "";
+    std::cout << "Service : Bridge : Active" << std::endl;
+    do {
+        std::cin >> tmp;
+    } while (cmdExit.compare(tmp));
+
 }
 
 Bridge::~Bridge() {
