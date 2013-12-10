@@ -10,8 +10,9 @@
 #include <exception>
 
 extern "C" {
-#include <qeo/factory.h>
-#include <qeo/api.h>
+#include "qeo/factory.h"
+#include "qeo/api.h"
+#include "AnimallQeoEvent.h"
 }
 
 #ifndef QEOEVENTREADER_HPP

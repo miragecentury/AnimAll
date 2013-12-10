@@ -8,8 +8,8 @@ build/Debug/GNU-Linux-x86/ToolCmdGamelle.o: ToolCmdGamelle.cpp \
  ../../Documents/QeoSDK-0.15.0/c/include/dds/dds_seq.h \
  ../../Documents/QeoSDK-0.15.0/c/include/dds/dds_error.h \
  ../../Documents/QeoSDK-0.15.0/c/include/qeo/api.h \
- ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h QeoEventWriter.hpp \
- AnimallQeoEvent.h AnimallQeoEventGamelleForceService.hpp feeder.h \
+ ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h AnimallQeoEvent.h \
+ QeoEventWriter.hpp AnimallQeoEventGamelleForceService.hpp feeder.h \
  scale.h
 
 ToolCmdGamelle.hpp:
@@ -36,9 +36,9 @@ QeoEventReader.hpp:
 
 ../../Documents/QeoSDK-0.15.0/c/include/qeo/error.h:
 
-QeoEventWriter.hpp:
-
 AnimallQeoEvent.h:
+
+QeoEventWriter.hpp:
 
 AnimallQeoEventGamelleForceService.hpp:
 
