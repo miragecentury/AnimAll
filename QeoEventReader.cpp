@@ -31,7 +31,7 @@ void Reader::start() {
     try {
         this->qeoEventReader = qeo_factory_create_event_reader(this->qeo, this->event, &this->qeoEventReaderListener, 0);
     } catch (std::exception &e) {
-        std::cout << e->what() << std::endl;
+        std::cout << e.what() << std::endl;
     }
 }
 

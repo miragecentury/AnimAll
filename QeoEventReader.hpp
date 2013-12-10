@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <exception>
 
 extern "C" {
 #include <qeo/factory.h>
