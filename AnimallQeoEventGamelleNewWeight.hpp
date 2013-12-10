@@ -4,7 +4,6 @@
  *
  */
 
-#include "AnimallQeoEvent.h"
 #include "QeoEventReader.hpp"
 #include "QeoEventWriter.hpp"
 

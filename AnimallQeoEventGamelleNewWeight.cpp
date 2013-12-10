@@ -30,7 +30,7 @@ void NewWeight::setCallBack(qeo_event_on_data_callback callback) {
 }
 
 void NewWeight::startListen() {
-    this->reader->start();
+    //this->reader->start();
 }
 
 void NewWeight::closeListen() {
