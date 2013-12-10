@@ -72,9 +72,15 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
         if (matInit) {
             bScale_getWeight(&new_weight);
             std::cout << "W: " << new_weight << " old: " << weight << std::endl;
+            //control -
             if (new_weight < 0) {
                 new_weight = 0;
             }
+            //tweak bis
+            if (new_weight == 5 && weight > 5) {
+                new_weight = 0;
+            }
+            //tweak variation
             if (new_weight > (weight + 15) || new_weight < (weight - 15)) {
                 std::cout << "Publish " << new_weight << std::endl;
                 gamelle->publishNewWeight((float) new_weight);

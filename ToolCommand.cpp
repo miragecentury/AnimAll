@@ -101,7 +101,7 @@ void Command::cmdBalanceHelp() {
 }
 
 void Command::cmdBridge(int argc, char** argv) {
-
+    Tool::Cmd::Bridge::service();
 }
 
 void Command::cmdBridgeHelp() {
