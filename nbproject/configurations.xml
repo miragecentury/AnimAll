@@ -139,6 +139,7 @@
           <stripSymbols>true</stripSymbols>
           <architecture>1</architecture>
           <standard>8</standard>
+          <commandlineTool>g++-4.7</commandlineTool>
           <incDir>
             <pElem>../../Documents/QeoSDK-0.15.0/c/include</pElem>
             <pElem>../../Documents/wiringPi</pElem>

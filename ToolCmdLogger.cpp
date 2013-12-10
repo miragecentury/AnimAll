@@ -46,7 +46,7 @@ void Logger::start() {
     this->managerGamelleForceService->startListen();
     sleep(2);
     std::cout << "Start Listen Gamelle ForceService" << std::endl;
-    this->managerGamelleNewWeight->startListen();
+    //this->managerGamelleNewWeight->startListen();
     std::cout << "Start Listen Gamelle NewWeight" << std::endl;
 }
 

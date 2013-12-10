@@ -12,24 +12,20 @@ Reader::Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DD
 }
 
 Reader::~Reader() {
-        if (this->qeoEventReader != NULL) {
-            qeo_event_reader_close(this->qeoEventReader);
-        }
+    if (this->qeoEventReader != NULL) {
+        qeo_event_reader_close(this->qeoEventReader);
+    }
 }
 
 void Reader::factory() {
     //this->qeoEventReaderListener = (qeo_event_reader_listener_t*) malloc(sizeof (qeo_event_reader_listener_t));
     //this->qeoEventReaderListener->on_data = (qeo_event_on_data_callback) this->callback;
-    this->qeoEventReaderListener.on_data = (qeo_event_on_data_callback) this->callback;
+    this->qeoEventReaderListener.on_data = this->callback;
 }
 
 void Reader::start() {
     std::cout << "Reader::Start" << std::endl;
-    try {
-        this->qeoEventReader = qeo_factory_create_event_reader(this->qeo, this->event, &(this->qeoEventReaderListener), 0);
-    } catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+    this->qeoEventReader = qeo_factory_create_event_reader(this->qeo, this->event, &(this->qeoEventReaderListener), 0);
 }
 
 void Reader::stop() {
