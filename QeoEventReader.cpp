@@ -12,12 +12,12 @@ Reader::Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DD
 }
 
 Reader::~Reader() {
-    //    if (this->qeoEventReader != NULL) {
-    //        qeo_event_reader_close(this->qeoEventReader);
-    //    }
-    //    if (this->qeoEventReaderListener != NULL) {
-    //        free(this->qeoEventReaderListener);
-    //    }
+        if (this->qeoEventReader != NULL) {
+            qeo_event_reader_close(this->qeoEventReader);
+        }
+        if (this->qeoEventReaderListener != NULL) {
+            free(this->qeoEventReaderListener);
+        }
 }
 
 void Reader::factory() {

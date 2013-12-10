@@ -159,7 +159,7 @@ void Command::cmdLogger(int argc, char** argv) {
     logger->start();
     do {
         std::cin >> tmp;
-    } while (cmdExit.compare(tmp));
+    } while (!cmdExit.compare(tmp));
     std::cout << "Logger : Exit" << std::endl;
     logger->end();
     delete(logger);
