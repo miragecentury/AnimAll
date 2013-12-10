@@ -71,12 +71,17 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
     while (gamelle->needClose != true) {
         if (matInit) {
             bScale_getWeight(&new_weight);
-            if (new_weight != weight) {
+            if (new_weight < 0) {
+                new_weight = 0;
+            }
+            if (new_weight > (weight + 15) && new_weight < (weight - 15)) {
                 gamelle->publishNewWeight((float) new_weight);
+            } else {
+                weight = new_weight;
             }
             weight = new_weight;
         }
-        sleep(10);
+        sleep(5);
     }
     //clear
     if (matInit) {

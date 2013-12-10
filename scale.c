@@ -20,7 +20,7 @@
 #define SPI_CHANNEL 0       /*! SPI channel # of ADC converter */
 #define SPI_CLK_HZ  1500000 /*! SPI clock in Hz, must be > 10kHz */
 
-#define FILTER_TAP_NUM 128
+#define FILTER_TAP_NUM 2048
 
 #define SCALE_PRECISION 5   /*! in gr */
 
