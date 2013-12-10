@@ -30,7 +30,7 @@ void Gamelle::callback(const qeo_event_reader_t* reader, const void* data, uintp
     qeo_animall_gamelle_ForceService_t* msg = (qeo_animall_gamelle_ForceService_t*) data;
     int i = 1;
     std::cout << "Service : Gamelle : ForceService Received : uuid : " << msg->uuidGamelle << " : dose : " << msg->dose << std::endl;
-    if (std::string("").compare(Animall::Qeo::Gamelle::ForceService::uuid)) {
+    if (!std::string(msg->uuidGamelle).compare(Animall::Qeo::Gamelle::ForceService::uuid)) {
         Gamelle::lock.lock();
         std::cout << "Accepted Run" << std::endl;
         system("mpg123 feeder.mp3");
