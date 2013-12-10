@@ -35,11 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o \
 	${OBJECTDIR}/AnimallApi.o \
 	${OBJECTDIR}/AnimallDeviceBridge.o \
 	${OBJECTDIR}/AnimallDeviceGamelle.o \
 	${OBJECTDIR}/AnimallQeoEvent.o \
+	${OBJECTDIR}/AnimallQeoEventBalanceNewWeight.o \
 	${OBJECTDIR}/AnimallQeoEventGamelleForceService.o \
 	${OBJECTDIR}/AnimallQeoEventGamelleNewWeight.o \
 	${OBJECTDIR}/QeoEventReader.o \
@@ -78,11 +78,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o: AnimalQeoEventBalanceNewWeight.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimalQeoEventBalanceNewWeight.o AnimalQeoEventBalanceNewWeight.cpp
-
 ${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -102,6 +97,11 @@ ${OBJECTDIR}/AnimallQeoEvent.o: AnimallQeoEvent.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEvent.o AnimallQeoEvent.c
+
+${OBJECTDIR}/AnimallQeoEventBalanceNewWeight.o: AnimallQeoEventBalanceNewWeight.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AnimallQeoEventBalanceNewWeight.o AnimallQeoEventBalanceNewWeight.cpp
 
 ${OBJECTDIR}/AnimallQeoEventGamelleForceService.o: AnimallQeoEventGamelleForceService.cpp 
 	${MKDIR} -p ${OBJECTDIR}
