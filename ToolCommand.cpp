@@ -155,7 +155,6 @@ void Command::cmdLogger(int argc, char** argv) {
     std::string cmdExit = std::string("exit");
     std::string tmp = std::string("");
     Tool::Cmd::Logger * logger = new Tool::Cmd::Logger();
-    std::cout << "Logger : Init" << std::endl;
     logger->start();
     do {
         std::cin >> tmp;

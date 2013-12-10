@@ -2,7 +2,7 @@
 
 using namespace Animall::Qeo::Gamelle;
 
-std::string ForceService::uuid = "";
+std::string ForceService::uuid = std::string("");
 
 ForceService::ForceService(qeo_factory_t* qeo, bool listener, bool sender) {
     this->qeo = qeo;
