@@ -67,6 +67,7 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
     } catch (std::exception &e) {
         matInit = false;
     }
+    sleep(5);
     //init
     while (gamelle->needClose != true) {
         if (matInit) {
