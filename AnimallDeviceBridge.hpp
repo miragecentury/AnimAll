@@ -13,6 +13,7 @@
 #include "AnimallQeoEventBalanceNewWeight.hpp"
 
 extern "C" {
+#include "AnimallQeoEvent.h"
 #include <qeo/factory.h>
 #include <qeo/api.h>
 }
