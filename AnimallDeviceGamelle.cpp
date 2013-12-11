@@ -13,6 +13,8 @@ Gamelle::Gamelle(bool balance, bool distributeur) {
         this->balance = true;
         this->eventManagerNewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, false, true); //sender
         this->eventManagerNewWeight->setSenderUUID(this->uuid);
+        bFeeder_setup();
+        sleep(5);
         this->threadCheckWight = new std::thread(Gamelle::threadcheck, this);
     }
     if (distributeur) {
@@ -35,23 +37,13 @@ void Gamelle::callback(const qeo_event_reader_t* reader, const void* data, uintp
         Gamelle::lock.lock();
         std::cout << "Accepted Run" << std::endl;
         system("mpg123 ./feeder_voice.mp3");
-        try {
-            bFeeder_setup();
-            sleep(5);
-        } catch (std::exception &e) {
-            matInit = false;
-        }
         if (matInit) {
-
-            
-            while (i< msg->dose) {
+            while (i < msg->dose) {
                 iFeeder_startCycle();
                 while (bFeeder_isRunning()) {
                 };
                 i++;
             }
-
-            vFeeder_cleanup();
         } else {
             std::cout << "Erreur d'init matériel" << std::endl;
         }
@@ -103,6 +95,7 @@ void Gamelle::threadcheck(Gamelle* gamelle) {
 }
 
 Gamelle::~Gamelle() {
+    vFeeder_cleanup();
     std::cout << "Service : Gamelle : on Closing" << std::endl;
     if (this->balance) {
         delete(this->eventManagerNewWeight);
