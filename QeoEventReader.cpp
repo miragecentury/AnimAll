@@ -2,7 +2,7 @@
 
 using namespace Qeo::Event;
 
-Reader::Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DDS_TypeSupport_meta * event) {
+Reader::Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DDS_TypeSupport_meta* event) {
     this->qeo = qeo;
     this->callback = callback;
     this->event = event;

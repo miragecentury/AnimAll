@@ -82,7 +82,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ../../Documents/wiringPi/wir
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS} -s
 
 ${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
 	${MKDIR} -p ${OBJECTDIR}
