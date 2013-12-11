@@ -13,7 +13,7 @@ Bridge::Bridge() {
     this->GnewWeight = new Animall::Qeo::Gamelle::NewWeight(this->qeo, true, false);
     this->GnewWeight->setCallBack(Bridge::callbackGamelleNewWeight);
 
-    //    this->startListenBalanceNewWeight();
+    this->startListenBalanceNewWeight();
     this->startListenGamelleNewWeight();
 
 

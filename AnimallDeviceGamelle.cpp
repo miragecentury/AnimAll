@@ -34,7 +34,7 @@ void Gamelle::callback(const qeo_event_reader_t* reader, const void* data, uintp
     if (!std::string(msg->uuidGamelle).compare(Animall::Qeo::Gamelle::ForceService::uuid)) {
         Gamelle::lock.lock();
         std::cout << "Accepted Run" << std::endl;
-        system("mpg123 feeder.mp3");
+        system("mpg123 ./feeder_voice.mp3");
         try {
             bFeeder_setup();
         } catch (std::exception &e) {

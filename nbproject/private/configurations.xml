@@ -30,8 +30,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" gamelle service distributeur</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" gamelle service balance</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" logger</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" gamelle service</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" logger</runcommand>
+        <runcommand>"${OUTPUT_PATH}" gamelle service</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
