@@ -117,6 +117,7 @@ Gamelle::~Gamelle() {
 void Gamelle::run() {
     std::string cmdExit = "exit";
     std::string tmp = "";
+    this->eventManagerForceService->startListen();
     std::cout << "Service : Gamelle : Active" << std::endl;
     do {
         std::cin >> tmp;

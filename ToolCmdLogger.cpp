@@ -4,6 +4,7 @@ using namespace Tool::Cmd;
 
 Logger::Logger() {
     this->qeo = qeo_factory_create();
+    sleep(2);
     std::cout << "End of qeo factory create" << std::endl;
     this->managerBalanceNewWeight = new Animall::Qeo::Balance::NewWeight(this->qeo, true, false);
     this->managerBalanceNewWeight->setCallBack(Logger::printBalanceNewWeight);
@@ -39,21 +40,21 @@ Logger::~Logger() {
 }
 
 void Logger::start() {
-    this->stateListen = true;
-    std::cout << "Start Listen Balance NewWeight" << std::endl;
-    this->managerBalanceNewWeight->startListen();
-    std::cout << "Start Listen Gamelle ForceService" << std::endl;
-    this->managerGamelleForceService->startListen();
-    std::cout << "Start Listen Gamelle NewWeight" << std::endl;
-    this->managerGamelleNewWeight->startListen();
+        this->stateListen = true;
+        std::cout << "Start Listen Balance NewWeight" << std::endl;
+        this->managerBalanceNewWeight->startListen();
+//        std::cout << "Start Listen Gamelle ForceService" << std::endl;
+        this->managerGamelleForceService->startListen();
+//        std::cout << "Start Listen Gamelle NewWeight" << std::endl;
+        this->managerGamelleNewWeight->startListen();
 }
 
 void Logger::end() {
-    std::cout << "Logger End" << std::endl;
-    this->stateListen = false;
-    this->managerBalanceNewWeight->closeListen();
-    this->managerGamelleForceService->closeListen();
-    this->managerGamelleNewWeight->closeListen();
+        std::cout << "Logger End" << std::endl;
+        this->stateListen = false;
+        this->managerBalanceNewWeight->closeListen();
+        this->managerGamelleForceService->closeListen();
+        this->managerGamelleNewWeight->closeListen();
 }
 
 void Logger::printBalanceNewWeight(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {

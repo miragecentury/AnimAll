@@ -1,6 +1,7 @@
 #include "AnimallQeoEventBalanceNewWeight.hpp"
 
 using namespace Animall::Qeo::Balance;
+using namespace Qeo::Event;
 
 NewWeight::NewWeight(qeo_factory_t* qeo, bool listener, bool sender) {
     this->qeo = qeo;

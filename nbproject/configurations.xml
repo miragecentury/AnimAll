@@ -139,7 +139,7 @@
           <stripSymbols>true</stripSymbols>
           <architecture>1</architecture>
           <standard>8</standard>
-          <commandlineTool>g++-4.7</commandlineTool>
+          <commandlineTool>g++</commandlineTool>
           <incDir>
             <pElem>../../Documents/QeoSDK-0.15.0/c/include</pElem>
             <pElem>../../Documents/wiringPi</pElem>
@@ -153,7 +153,6 @@
             <pElem>../../Documents/QeoSDK-0.15.0/c/lib</pElem>
             <pElem>../../Documents/wiringPi/wiringPi</pElem>
           </linkerAddLib>
-          <stripSymbols>true</stripSymbols>
           <linkerLibItems>
             <linkerLibFileItem>../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeo.so</linkerLibFileItem>
             <linkerLibFileItem>../../Documents/QeoSDK-0.15.0/c/lib/i686-linux/libqeoutil.so</linkerLibFileItem>

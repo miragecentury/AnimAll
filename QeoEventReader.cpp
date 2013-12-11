@@ -10,6 +10,8 @@ Reader::Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DD
     this->qeoEventReaderListener = NULL;
     this->qeoEventReaderListener = (qeo_event_reader_listener_t*) malloc(sizeof (qeo_event_reader_listener_t));
     this->qeoEventReaderListener->on_data = this->callback;
+    this->qeoEventReaderListener->on_no_more_data = Reader::onNoMore;
+    this->qeoEventReaderListener->on_policy_update = Reader::onPolicy;
 }
 
 Reader::~Reader() {
@@ -24,20 +26,16 @@ Reader::~Reader() {
 void Reader::factory() {
 }
 
+qeo_policy_perm_t Reader::onPolicy(const qeo_event_reader_t* reader, const qeo_policy_identity_t* identity, uintptr_t userdata) {
+
+};
+
+void Reader::onNoMore(const qeo_event_reader_t* reader, uintptr_t userdata) {
+
+}
+
 void Reader::start() {
-    if(this->qeo != NULL){
-        std::cout << "Qeo Ok" << std::endl;
-    }
-    if(this->event != NULL){
-        std::cout << "Event Ok" << std::endl;
-    }
-    if(this->qeoEventReaderListener != NULL){
-        std::cout << "Listener OK" << std::endl;
-    }
     this->qeoEventReader = qeo_factory_create_event_reader(this->qeo, this->event, this->qeoEventReaderListener, 0);
-    if (this->qeoEventReader == NULL) {
-        std::cout << "FAILED!" << std::endl;
-    }
 }
 
 void Reader::stop() {

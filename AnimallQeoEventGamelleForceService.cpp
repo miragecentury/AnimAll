@@ -1,6 +1,7 @@
 #include "AnimallQeoEventGamelleForceService.hpp"
 
 using namespace Animall::Qeo::Gamelle;
+using namespace Qeo::Event;
 
 std::string ForceService::uuid = std::string("");
 
@@ -39,7 +40,7 @@ void ForceService::publish(std::string uuid, int dose) {
 }
 
 void ForceService::setCallBack(qeo_event_on_data_callback callback) {
-    this->reader = new Reader(this->qeo, (qeo_event_on_data_callback) callback,( const DDS_TypeSupport_meta *) &qeo_animall_gamelle_ForceService_type);
+    this->reader = new Reader(this->qeo, callback, qeo_animall_gamelle_ForceService_type);
 }
 
 void ForceService::startListen() {

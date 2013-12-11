@@ -23,17 +23,19 @@ namespace Qeo {
 
         class Reader {
         public:
-            Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DDS_TypeSupport_meta * event);
+            Reader(qeo_factory_t* qeo, qeo_event_on_data_callback callback, const DDS_TypeSupport_meta* event);
             ~Reader();
-             void start();
+            void start();
             void stop();
+            static qeo_policy_perm_t onPolicy(const qeo_event_reader_t *reader, const qeo_policy_identity_t *identity, uintptr_t userdata);
+            static void onNoMore(const qeo_event_reader_t *reader, uintptr_t userdata);
         private:
             void factory();
         protected:
             qeo_factory_t* qeo = NULL;
             qeo_event_reader_t* qeoEventReader = NULL;
-            qeo_event_reader_listener_t* qeoEventReaderListener;
-            const DDS_TypeSupport_meta * event = NULL;
+            qeo_event_reader_listener_t* qeoEventReaderListener = NULL;
+            const DDS_TypeSupport_meta* event = NULL;
             qeo_event_on_data_callback callback = NULL;
         };
     }

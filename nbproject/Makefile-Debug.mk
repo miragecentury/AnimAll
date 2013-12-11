@@ -15,8 +15,8 @@ NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
 CC=gcc
-CCC=g++-4.7
-CXX=g++-4.7
+CCC=g++
+CXX=g++
 FC=gfortran
 AS=as
 
@@ -82,7 +82,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ../../Documents/wiringPi/wir
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS} -s
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/animall ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/AnimallApi.o: AnimallApi.cpp 
 	${MKDIR} -p ${OBJECTDIR}

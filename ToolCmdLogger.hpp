@@ -13,9 +13,9 @@
 #include "AnimallQeoEventGamelleNewWeight.hpp"
 
 extern "C" {
-#include "AnimallQeoEvent.h"
 #include "qeo/api.h"
 #include "qeo/factory.h"
+#include "AnimallQeoEvent.h"
 }
 
 #ifndef TOOLCMDLOGGER_HPP

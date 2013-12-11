@@ -20,7 +20,7 @@ namespace Qeo {
 
         class Writer {
         public:
-            Writer(qeo_factory_t* qeo, const DDS_TypeSupport_meta * msgType);
+            Writer(qeo_factory_t* qeo,const DDS_TypeSupport_meta* msgType);
             ~Writer();
             /**/
             bool send(const void * msg);
@@ -29,7 +29,7 @@ namespace Qeo {
         protected:
             qeo_factory_t* qeo;
             qeo_event_writer_t* qeoEventWriter;
-            const DDS_TypeSupport_meta * msgType;
+            const DDS_TypeSupport_meta* msgType;
         };
     }
 }
