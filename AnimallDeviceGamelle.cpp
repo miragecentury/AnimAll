@@ -37,18 +37,20 @@ void Gamelle::callback(const qeo_event_reader_t* reader, const void* data, uintp
         system("mpg123 ./feeder_voice.mp3");
         try {
             bFeeder_setup();
+            sleep(5);
         } catch (std::exception &e) {
             matInit = false;
         }
         if (matInit) {
-            iFeeder_startCycle();
 
-            while (i < msg->dose) {
-                sleep(10);
+            
+            while (i< msg->dose) {
                 iFeeder_startCycle();
+                while (bFeeder_isRunning()) {
+                };
                 i++;
             }
-            vFeeder_cancel();
+
             vFeeder_cleanup();
         } else {
             std::cout << "Erreur d'init matériel" << std::endl;
