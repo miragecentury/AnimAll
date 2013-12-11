@@ -50,6 +50,7 @@ bool bFeeder_setup()
     }
 
     // Setup I/O
+    digitalWrite(MOTOR_PIN, LOW);
     pinMode(MOTOR_PIN, OUTPUT);
     pinMode(SWITCH_PIN, INPUT);
     pullUpDnControl(SWITCH_PIN, PUD_UP);
