@@ -31,21 +31,18 @@ Gamelle::Gamelle(bool balance, bool distributeur) {
 void Gamelle::callback(const qeo_event_reader_t* reader, const void* data, uintptr_t userdata) {
     bool matInit = true;
     qeo_animall_gamelle_ForceService_t* msg = (qeo_animall_gamelle_ForceService_t*) data;
-    int i = 1;
+    int i = 0;
     std::cout << "Service : Gamelle : ForceService Received : uuid : " << msg->uuidGamelle << " : dose : " << msg->dose << std::endl;
     if (!std::string(msg->uuidGamelle).compare(Animall::Qeo::Gamelle::ForceService::uuid)) {
         Gamelle::lock.lock();
         std::cout << "Accepted Run" << std::endl;
         system("mpg123 ./feeder_voice.mp3");
-        if (matInit) {
-            while (i < msg->dose) {
-                iFeeder_startCycle();
-                while (bFeeder_isRunning()) {
-                };
-                i++;
-            }
-        } else {
-            std::cout << "Erreur d'init matériel" << std::endl;
+        
+        while (i < msg->dose) {
+            iFeeder_startCycle();
+            while (bFeeder_isRunning()) {
+            };
+            i++;
         }
         std::cout << "End of Service" << std::endl;
         Gamelle::lock.unlock();
